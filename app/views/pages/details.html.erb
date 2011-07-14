@@ -28,9 +28,14 @@
 <% end-%>
 
 
-<% link = 'http://world-pulse.ru/archives/281' %>
-<% @lenta = open(link) %>
-<% @lenta.read %>
+<% url = 'http://world-pulse.ru/archives/281' %>
+<% page = open(url) %>
+<% text = page.read %>
+<% infa = text.scan(%r{<p style="text-align: justify;">(.*)</p>}) %>
+<% infa.each do |t| -%>
+<%=  t %>
+<p> </p>
+<% end -%>
 
 
   </body>
