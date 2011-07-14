@@ -1,2 +1,37 @@
-<h1>Pages#details</h1>
-<p>Find me in app/views/pages/details.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @title %></title>
+  </head>
+  <body>
+<%  require 'simple-rss' %>
+<% require 'open-uri' %>
+<% @str_link = Settings.find_by_option_name("link") %>
+<% link = @str_link.option_status %>
+<% feed_items = SimpleRSS.parse(open(link)).items %>
+<% newss = {} %>
+<% feed_items.each do |item| -%>
+<% @name = item.title %>
+<% if News.find_by_title(@name) == nil %>
+<% newss[@name] = News.new %>
+<% newss[@name] = News.new %>
+<% newss[@name][:title] = item.title %>
+<% newss[@name][:link] = item.link %>
+<% newss[@name][:description] = item.description %> 
+<% newss[@name].save %>
+
+<% else %>
+<% @tmp = '1' %>
+
+
+<% end %>
+<% end-%>
+
+
+<% link = 'http://world-pulse.ru/archives/281' %>
+<% @lenta = open(link) %>
+<% @lenta.read %>
+
+
+  </body>
+</html>

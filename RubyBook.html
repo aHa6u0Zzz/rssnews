@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Ruby — Викиучебник</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.17wmf1" />
+<link rel="alternate" type="application/x-wiki" title="Править" href="/w/index.php?title=Ruby&amp;action=edit" />
+<link rel="edit" title="Править" href="/w/index.php?title=Ruby&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Викиучебник (ru)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://ru.wikibooks.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Викиучебник — Atom-лента" href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/ru.wikibooks.org/load.php?debug=false&amp;lang=ru&amp;modules=mediawiki%21legacy%21commonPrint%7Cmediawiki%21legacy%21shared%7Cskins%21vector&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<meta name="ResourceLoaderDynamicStyles" content="" /><link rel="stylesheet" href="http://bits.wikimedia.org/ru.wikibooks.org/load.php?debug=false&amp;lang=ru&amp;modules=site&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<style type="text/css" media="all">a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: ruwikibooks:resourceloader:filter:minify-css:5:f2a9127573a22335c2a9102b208c73e7 */</style>
+<script src="http://bits.wikimedia.org/ru.wikibooks.org/load.php?debug=false&amp;lang=ru&amp;modules=startup&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Ruby", "wgTitle": "Ruby", "wgAction": "view", "wgArticleId": 2201, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 65073, "wgCategories": ["Языки программирования", "Ruby", "Объектно-ориентированное программирование"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0], "wgVectorEnabledModules": {"collapsiblenav": true, "collapsibletabs": true, "editwarning": true, "expandablesearch": false, "footercleanup": false, "sectioneditlinks": false, "simplesearch": true, "experiments": true}, "wgWikiEditorEnabledModules": {"toolbar": true, "dialogs": true, "templateEditor": false, "templates": false, "addMediaWizard": false, "preview": false, "previewDialog": false, "publish": false, "toc": false}, "Geo": {"city": "", "country": ""}, "wgNoticeProject": "wikibooks"});
+}
+</script>
+
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins-1.17/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr ns-0 ns-subject page-Ruby skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- sitenotice -->
+			<div id="siteNotice"><!-- centralNotice loads here --></div>
+			<!-- /sitenotice -->
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Ruby</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+				<!-- tagline -->
+				<div id="siteSub">Материал из Викиучебника</div>
+				<!-- /tagline -->
+				<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					Перейти к: <a href="#mw-head">навигация</a>,
+					<a href="#p-search">поиск</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodytext -->
+				<div class="floatleft"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Ruby_logo.png" class="image"><img alt="Ruby logo.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Ruby_logo.png/150px-Ruby_logo.png" width="150" height="150" /></a></div>
+<div class="epigraf">
+<blockquote>
+<p>Человек создан для творчества, и я всегда знал, что люблю творить. Увы, я обделён талантом художника или музыканта. Зато умею писать программы.</p>
+<p>Я хочу, чтобы компьютер был моим слугой, а не господином, поэтому я должен уметь быстро и эффективно объяснить ему, что делать.</p>
+</blockquote>
+<p class="podpis" style="text-align:right;font-style:normal"><a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%86%D1%83%D0%BC%D0%BE%D1%82%D0%BE,_%D0%AE%D0%BA%D0%B8%D1%85%D0%B8%D1%80%D0%BE" class="extiw" title="w:Мацумото, Юкихиро">Юкихиро Мацумото</a></p>
+</div>
+<div class="epigraf">
+<blockquote>
+<p>Программы должны быть написаны так, чтобы их могли читать люди, и лишь иногда так, чтобы их могли выполнять машины.</p>
+</blockquote>
+<p class="podpis" style="text-align:right;font-style:normal">Абельсон и Сассман</p>
+</div>
+<p><br /></p>
+<div class="infobox wikipedia noprint" style="position:relative"><a href="http://ru.wikipedia.org/wiki/Ruby" class="extiw" title="w:Ruby"><span style="float:left;font:normal 18pt sans-serif;margin:-0.5em 0 0 0;">→</span> <span style="margin-left:0.7em;display:block;text-align:left;">Статья «Ruby»</span></a> <span style="float:left;clear:both;padding-left:7em;">в&#160;<a href="http://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" class="extiw" title="w:Заглавная страница">Википедии</a></span></div>
+<p><b>Ру́би</b> — <a href="http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D1%80%D0%B5%D1%82%D0%B0%D1%82%D0%BE%D1%80" class="extiw" title="w:Интерпретатор">интерпретируемый</a> <a href="http://ru.wikipedia.org/wiki/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D1%83%D1%80%D0%BE%D0%B2%D0%BD%D0%B5%D0%B2%D1%8B%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" class="extiw" title="w:Высокоуровневый язык программирования">язык программирования высокого уровня</a>. Обладает независимой от <a href="http://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" class="extiw" title="w:Операционная система">операционной системы</a> реализацией <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" class="extiw" title="w:Многопоточность">многопоточности</a>, строгой <a href="http://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" class="extiw" title="w:Динамическая типизация">динамической типизацией</a>, <a href="http://ru.wikipedia.org/wiki/%D0%A1%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D0%BA_%D0%BC%D1%83%D1%81%D0%BE%D1%80%D0%B0" class="extiw" title="w:Сборщик мусора">«сборщиком мусора»</a> и многими <a href="http://ru.wikipedia.org/wiki/Ruby#.D0.92.D0.BE.D0.B7.D0.BC.D0.BE.D0.B6.D0.BD.D0.BE.D1.81.D1.82.D0.B8_Ruby" class="extiw" title="w:Ruby">другими возможностями</a>, поддерживающими много разных <a href="http://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%B0%D0%B4%D0%B8%D0%B3%D0%BC%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" class="extiw" title="w:Парадигма программирования">парадигм программирования</a>, прежде всего <a href="/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Объектно-ориентированное программирование">классово-объектную</a>. Ruby был задуман в <a href="http://ru.wikipedia.org/wiki/1993" class="extiw" title="w:1993">1993</a> году <a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/15977" class="external text" rel="nofollow">(24 февраля)</a> японцем <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%86%D1%83%D0%BC%D0%BE%D1%82%D0%BE,_%D0%AE%D0%BA%D0%B8%D1%85%D0%B8%D1%80%D0%BE" class="extiw" title="w:Мацумото, Юкихиро">Юкихиро Мацумото</a>, стремившимся создать язык, совмещающий все качества других языков, способствующие облегчению труда программиста.</p>
+<p>Этот учебник намерен осветить все тонкости программирования на Ruby. Повествование идёт «по спирали»: начиная с самых общих понятий, темы рассматриваются по нескольку раз с нарастающей подробностью.</p>
+<p>Учебник пока неполон. Читайте <a href="#.D0.98.D0.BD.D0.BE.D1.8F.D0.B7.D1.8B.D1.87.D0.BD.D0.B0.D1.8F_.D0.BB.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0">иноязычную литературу по Ruby</a> и с новыми знаниями присоединяйтесь к написанию. Да-да, каждый может участвовать: <a href="/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0" title="Справка" class="mw-redirect">научитесь работать</a> в <a href="http://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8" class="extiw" title="w:Вики">вики</a>-среде, с остающимися вопросами выступайте на <a href="/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:Ruby" title="Обсуждение:Ruby">странице обсуждения учебника</a>.</p>
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Содержание</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D0.BF.D0.B5.D1.80.D0.B2.D0.B0.D1.8F._.D0.94.D0.BB.D1.8F_.D0.BE.D0.B7.D0.BD.D0.B0.D0.BA.D0.BE.D0.BC.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F"><span class="tocnumber">1</span> <span class="toctext">Часть первая. Для ознакомления</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D0.B2.D1.82.D0.BE.D1.80.D0.B0.D1.8F._.D0.94.D0.BB.D1.8F_.D0.BD.D0.B0.D1.87.D0.B8.D0.BD.D0.B0.D1.8E.D1.89.D0.B8.D1.85"><span class="tocnumber">2</span> <span class="toctext">Часть вторая. Для начинающих</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D1.82.D1.80.D0.B5.D1.82.D1.8C.D1.8F._.D0.94.D0.BB.D1.8F_.D0.BF.D1.80.D0.BE.D0.B4.D0.B2.D0.B8.D0.BD.D1.83.D1.82.D1.8B.D1.85"><span class="tocnumber">3</span> <span class="toctext">Часть третья. Для продвинутых</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D1.87.D0.B5.D1.82.D0.B2.D0.B5.D1.80.D1.82.D0.B0.D1.8F._.D0.94.D0.BB.D1.8F_.D1.84.D0.B0.D0.BD.D0.B0.D1.82.D0.BE.D0.B2"><span class="tocnumber">4</span> <span class="toctext">Часть четвертая. Для фанатов</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.D0.9F.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F"><span class="tocnumber">5</span> <span class="toctext">Приложения</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.D0.94.D0.B0.D0.BB.D1.8C.D0.BD.D0.B5.D0.B9.D1.88.D0.B5.D0.B5_.D1.87.D1.82.D0.B5.D0.BD.D0.B8.D0.B5"><span class="tocnumber">6</span> <span class="toctext">Дальнейшее чтение</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#.D0.A0.D1.83.D1.81.D1.81.D0.BA.D0.BE.D1.8F.D0.B7.D1.8B.D1.87.D0.BD.D1.8B.D0.B5_.D1.80.D0.B5.D1.81.D1.83.D1.80.D1.81.D1.8B"><span class="tocnumber">6.1</span> <span class="toctext">Русскоязычные ресурсы</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.D0.A0.D1.83.D1.81.D1.81.D0.BA.D0.BE.D1.8F.D0.B7.D1.8B.D1.87.D0.BD.D0.B0.D1.8F_.D0.BB.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0"><span class="tocnumber">6.2</span> <span class="toctext">Русскоязычная литература</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.D0.98.D0.BD.D0.BE.D1.8F.D0.B7.D1.8B.D1.87.D0.BD.D0.B0.D1.8F_.D0.BB.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0"><span class="tocnumber">6.3</span> <span class="toctext">Иноязычная литература</span></a></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=1" title="Править секцию: Часть первая. Для ознакомления">править</a>]</span> <span class="mw-headline" id=".D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D0.BF.D0.B5.D1.80.D0.B2.D0.B0.D1.8F._.D0.94.D0.BB.D1.8F_.D0.BE.D0.B7.D0.BD.D0.B0.D0.BA.D0.BE.D0.BC.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F">Часть первая. <a href="/wiki/Ruby/%D0%94%D0%BB%D1%8F_%D0%BE%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Ruby/Для ознакомления">Для ознакомления</a></span></h2>
+<dl>
+<dt><a href="/wiki/Ruby/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5_%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0_Ruby" title="Ruby/Основные свойства Ruby">/Основные свойства Ruby</a></dt>
+<dd>Глава об основных свойствах, возможностях и недостатках языка Ruby.</dd>
+<dt><a href="/wiki/Ruby/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B" title="Ruby/Начало работы">/Начало работы</a></dt>
+<dd>Глава о том, как скачать интерпретатор, запустить свою программу и увидеть хоть какой-то результат выполнения своей программы.</dd>
+<dt><a href="/wiki/Ruby/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5" title="Ruby/Переменные">/Переменные</a></dt>
+<dd>Глава о правилах именования переменных и специфике их использования в языке Ruby.</dd>
+<dt><a href="/wiki/Ruby/%D0%91%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5_%D1%82%D0%B8%D0%BF%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" title="Ruby/Базовые типы данных">/Базовые типы данных</a></dt>
+<dd>Глава содержит <a href="http://ru.wikipedia.org/wiki/%D0%98%D0%B5%D1%80%D0%B0%D1%80%D1%85%D0%B8%D1%8F_(%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" class="extiw" title="w:Иерархия (объектно-ориентированное программирование)">иерархию</a> базовых типов и описание к ним.</dd>
+</dl>
+<h2><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=2" title="Править секцию: Часть вторая. Для начинающих">править</a>]</span> <span class="mw-headline" id=".D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D0.B2.D1.82.D0.BE.D1.80.D0.B0.D1.8F._.D0.94.D0.BB.D1.8F_.D0.BD.D0.B0.D1.87.D0.B8.D0.BD.D0.B0.D1.8E.D1.89.D0.B8.D1.85">Часть вторая. <a href="/wiki/Ruby/%D0%94%D0%BB%D1%8F_%D0%BD%D0%B0%D1%87%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B8%D1%85" title="Ruby/Для начинающих">Для начинающих</a></span></h2>
+<dl>
+<dt><a href="/wiki/Ruby/%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5_%D0%BE_%D1%87%D0%B8%D1%81%D0%BB%D0%B0%D1%85" title="Ruby/Подробнее о числах">/Подробнее о числах</a></dt>
+<dd>Глава о видах чисел, которые присутствуют в языке Ruby, а также подробно описаны <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_(%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" class="extiw" title="w:Метод (языки программирования)">методы</a> для работы с ними.</dd>
+<dt><a href="/wiki/Ruby/%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5_%D0%BE_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B0%D1%85" title="Ruby/Подробнее о массивах">/Подробнее о массивах</a></dt>
+<dd>Глава о массивах, <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_(%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" class="extiw" title="w:Метод (языки программирования)">методах</a> работы с ними и описана специфика работы с ними в языке Ruby.</dd>
+<dt><a href="/wiki/Ruby/%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5_%D0%BE%D0%B1_%D0%B0%D1%81%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B0%D1%85" title="Ruby/Подробнее об ассоциативных массивах">/Подробнее об ассоциативных массивах</a></dt>
+<dd>Глава об ассоциативных массивах, <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_(%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" class="extiw" title="w:Метод (языки программирования)">методах</a> работы с ними и описывает базовые ситуации в которых они применимы.</dd>
+<dt><a href="/wiki/Ruby/%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5_%D0%BE_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0%D1%85" title="Ruby/Подробнее о строках">/Подробнее о строках</a></dt>
+<dd>Глава о таком универсальном типе данных, как строки. Раскрывает секрет его универсальности, описывает <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_(%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" class="extiw" title="w:Метод (языки программирования)">методы</a> и <a href="http://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" class="extiw" title="w:Регулярные выражения">правила</a> работы с ними.</dd>
+</dl>
+<h2><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=3" title="Править секцию: Часть третья. Для продвинутых">править</a>]</span> <span class="mw-headline" id=".D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D1.82.D1.80.D0.B5.D1.82.D1.8C.D1.8F._.D0.94.D0.BB.D1.8F_.D0.BF.D1.80.D0.BE.D0.B4.D0.B2.D0.B8.D0.BD.D1.83.D1.82.D1.8B.D1.85">Часть третья. <a href="/wiki/Ruby/%D0%94%D0%BB%D1%8F_%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%BD%D1%83%D1%82%D1%8B%D1%85" title="Ruby/Для продвинутых">Для продвинутых</a></span></h2>
+<dl>
+<dt><a href="/wiki/Ruby/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D1%8B_%D0%B8_%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B" title="Ruby/Матрицы и векторы">Матрицы и векторы</a></dt>
+<dd>Глава о представлении матричной алгебры.</dd>
+<dt><a href="/wiki/Ruby/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81_%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D0%BC%D0%B8" title="Ruby/Работа с файлами">Работа с файлами</a></dt>
+<dd>Глава о работе с файловой системой.</dd>
+<dt><a href="/wiki/Ruby/%D0%A1%D0%B5%D1%82%D0%B8" title="Ruby/Сети">Сети</a></dt>
+<dd>Глава по работе с сетью. Приведено несколько листингов сетевых приложений.</dd>
+<dt><a href="/w/index.php?title=Ruby/Desktop(Tk)&amp;action=edit&amp;redlink=1" class="new" title="Ruby/Desktop(Tk) (такой страницы не существует)">Desktop (Tk)</a></dt>
+<dd>Глава по работе с классами <a href="/w/index.php?title=Tk&amp;action=edit&amp;redlink=1" class="new" title="Tk (такой страницы не существует)">Tk</a> для создания GUI-приложений.</dd>
+<dt><a href="/wiki/Ruby/Desktop(Qt4)" title="Ruby/Desktop(Qt4)">Desktop (Qt4)</a></dt>
+<dd>Глава по работе с классами <a href="/wiki/QT" title="QT">Qt4</a> для создания GUI-приложений.</dd>
+<dt><a href="/wiki/Ruby/Desktop(wxRuby)" title="Ruby/Desktop(wxRuby)">Desktop (wxRuby)</a></dt>
+<dd>Глава по работе с классами <a href="/w/index.php?title=WxWidgets&amp;action=edit&amp;redlink=1" class="new" title="WxWidgets (такой страницы не существует)">wxWidgets</a> для создания GUI-приложений.</dd>
+</dl>
+<h2><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=4" title="Править секцию: Часть четвертая. Для фанатов">править</a>]</span> <span class="mw-headline" id=".D0.A7.D0.B0.D1.81.D1.82.D1.8C_.D1.87.D0.B5.D1.82.D0.B2.D0.B5.D1.80.D1.82.D0.B0.D1.8F._.D0.94.D0.BB.D1.8F_.D1.84.D0.B0.D0.BD.D0.B0.D1.82.D0.BE.D0.B2">Часть четвертая. <a href="/wiki/Ruby/%D0%94%D0%BB%D1%8F_%D1%84%D0%B0%D0%BD%D0%B0%D1%82%D0%BE%D0%B2" title="Ruby/Для фанатов">Для фанатов</a></span></h2>
+<dl>
+<dt><a href="/wiki/Ruby/%D0%9F%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5_%D0%BE_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B0%D1%85" title="Ruby/Подробнее о методах">/Подробнее о методах</a></dt>
+<dd>Глава о видах и способах создания <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_(%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" class="extiw" title="w:Метод (языки программирования)">методов</a> в <a href="http://ru.wikipedia.org/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" class="extiw" title="w:Язык программирования">языке программирования</a> Ruby.</dd>
+<dt><a href="/wiki/Ruby/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D0%BA%D0%B0_%D1%81%D0%B0%D0%BC%D0%BE%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D1%8F" title="Ruby/Методика самопознания">/Методика самопознания</a></dt>
+<dd>Глава о <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%B0%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="extiw" title="w:Метапрограммирование">метапрограммировании</a> на языке Ruby.</dd>
+</dl>
+<h2><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=5" title="Править секцию: Приложения">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F">Приложения</span></h2>
+<dl>
+<dt><a href="/wiki/Ruby/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%BD%D0%B8%D0%BA" title="Ruby/Задачник">/Задачник</a></dt>
+<dd>Сборник задач.</dd>
+<dt><a href="/wiki/Ruby/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC" title="Ruby/Практикум">/Практикум</a></dt>
+<dd>Сборник задач с примерами решений.
+<dl>
+<dt><a href="/wiki/Ruby/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/%D0%A7%D0%B8%D1%81%D0%BB%D0%B0" title="Ruby/Практикум/Числа">/Практикум/Числа</a></dt>
+<dt><a href="/wiki/Ruby/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/%D0%9C%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D1%8B" title="Ruby/Практикум/Массивы">/Практикум/Массивы</a></dt>
+<dt><a href="/wiki/Ruby/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/%D0%98%D1%82%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B" title="Ruby/Практикум/Итераторы">/Практикум/Итераторы</a></dt>
+<dt><a href="/wiki/Ruby/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/%D0%A1%D1%82%D1%80%D0%BE%D0%BA%D0%B8" title="Ruby/Практикум/Строки">/Практикум/Строки</a></dt>
+<dt><a href="/wiki/Ruby/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0" title="Ruby/Практикум/Правила">/Практикум/Правила</a></dt>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt><a href="/wiki/Ruby/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA" title="Ruby/Справочник">/Справочник</a></dt>
+<dd>Справочник по базовым классам.</dd>
+<dt><a href="/wiki/Ruby/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F" title="Ruby/Лицензия">/Лицензия</a></dt>
+<dd>Перевод Лицензии Ruby.</dd>
+<dt><a href="/wiki/Ruby/%D0%96%D0%B0%D1%80%D0%B3%D0%BE%D0%BD" title="Ruby/Жаргон">/Жаргон</a></dt>
+<dd>Придумываем слова с рубинами и рельсами.</dd>
+<dt><a href="/wiki/Ruby/%D0%A4%D0%BE%D0%BB%D1%8C%D0%BA%D0%BB%D0%BE%D1%80" title="Ruby/Фольклор">/Фольклор</a></dt>
+<dd>Народное творчество любителей Ruby.</dd>
+<dt><a href="/wiki/Ruby/%D0%98%D0%B7%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D1%81_RubyNews" title="Ruby/Избранное с RubyNews">/Избранное с RubyNews</a></dt>
+<dd>К разграблению. Полезные статьи перемещаются в основную часть учебника, затем это приложение удалим.</dd>
+<dt><a href="/wiki/Ruby/%D0%98%D0%B4%D0%B5%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" title="Ruby/Идеология">/Идеология</a></dt>
+<dd>Программирования вообще и на Ruby в частности.</dd>
+</dl>
+<h2><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=6" title="Править секцию: Дальнейшее чтение">править</a>]</span> <span class="mw-headline" id=".D0.94.D0.B0.D0.BB.D1.8C.D0.BD.D0.B5.D0.B9.D1.88.D0.B5.D0.B5_.D1.87.D1.82.D0.B5.D0.BD.D0.B8.D0.B5">Дальнейшее чтение</span></h2>
+<h3><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=7" title="Править секцию: Русскоязычные ресурсы">править</a>]</span> <span class="mw-headline" id=".D0.A0.D1.83.D1.81.D1.81.D0.BA.D0.BE.D1.8F.D0.B7.D1.8B.D1.87.D0.BD.D1.8B.D0.B5_.D1.80.D0.B5.D1.81.D1.83.D1.80.D1.81.D1.8B">Русскоязычные ресурсы</span></h3>
+<ul>
+<li><a href="http://railsclub.ru/" class="external text" rel="nofollow">Railsclub.ru</a>. Конференция разработчиков на Ruby on Rails</li>
+<li><a href="http://rubyclub.com.ua/" class="external text" rel="nofollow">Форум Ruby on rails</a>. Русскоязычный форум, написанный и посвящённый Ruby on Rails. Здесь всегда отвечают на ваши вопросы, для зарегистрированных доступна тематическая PDF библиотека.</li>
+<li><a href="http://acm.mipt.ru/twiki/bin/view/Ruby/WebHome" class="external text" rel="nofollow">Учебные материалы МФТИ</a>. Коллекция учебных материалов по Ruby на сайте <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%A4%D0%A2%D0%98" class="extiw" title="w:МФТИ">МФТИ</a>.</li>
+<li><a href="http://rubyflow.ru" class="external text" rel="nofollow">RubyFlow.ru - новости о Ruby, отобранные сообществом разработчиков</a>. Это официальная русская версия проекта <a href="http://rubyflow.com" class="external text" rel="nofollow">RubyFlow.com</a></li>
+<li><a href="http://railstutorial.ru" class="external text" rel="nofollow">railstutorial.ru - учебник по Ruby on Rails</a>. - Перевод учебника <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book" class="external text" rel="nofollow">Ruby on Rails Tutorial</a></li>
+</ul>
+<h3><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=8" title="Править секцию: Русскоязычная литература">править</a>]</span> <span class="mw-headline" id=".D0.A0.D1.83.D1.81.D1.81.D0.BA.D0.BE.D1.8F.D0.B7.D1.8B.D1.87.D0.BD.D0.B0.D1.8F_.D0.BB.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0">Русскоязычная литература</span></h3>
+<ul>
+<li><a href="http://ruby.at.ua/load" class="external text" rel="nofollow">Программирование на языке Ruby. Идеология языка, теория и практика применения. Автор Хэл Фултон</a>. Прекрасная книга затрагивающая практически все аспекты программирования от азов до графический интерфейсов и WEB-ресурсов. (<i>нет прямой ссылки</i>)</li>
+<li><a href="http://www.shokhirev.com/mikhail/ruby/ltp/title.html" class="external text" rel="nofollow">Learn To Program</a>. Перевод Михаила В. Шохирева. (<i>очень поверхностно</i>)</li>
+<li><a href="http://www.linuxshare.ru/docs/devel/languages/ruby/ruby.html" class="external text" rel="nofollow">Ruby — руководство пользователя</a>. Перевод Александра Мячкова.</li>
+<li><a href="http://garbage-collector.ru/docs/ror/Rolling_with_Ruby_on_Rails_rus_translation.pdf" class="external text" rel="nofollow">Rolling with Ruby on Rails</a>. Перевод Андрея Горбатова. <i>(ссылка исправлена)</i></li>
+<li><a href="http://www3.msiu.ru/~roganova/First_A_2005-2006/ruby_notes.pdf" class="external text" rel="nofollow">Программирование на Ruby</a>. Учебное пособие по языку Ruby, Роганова Н. А., Тузов А. С.(<i>очень поверхностно</i>)</li>
+<li><a href="http://www3.msiu.ru/~roganova/First_A_2005-2006/index.html" class="external text" rel="nofollow">Лекции по программированию</a>. Роганова Н. А.</li>
+<li><a href="http://www.webtag.ru/kuru/kuruby.php" class="external text" rel="nofollow">Учебники Ruby</a>. несколько учебных пособий по Ruby и ссылки на сетевые ресурсы о Ruby</li>
+<li>Книга "The Ruby Programming Language" Дэвида Фланагана и Юкихиро Мацумото уже несколько месяцев, как переведена на русский язык, но ее выпуск "заморожен" руководством издательства "Питер" из-за "неактуальности" темы. Если представителям Ruby-сообщества удастся убедить издательство в обратном, то и эта книга увидит свет. Пока это самое полное и глубокое описание языка Ruby, переведенное на русский язык, а один из ее авторов - ни кто иной, как сам отец-основатель языка Ruby.</li>
+</ul>
+<h3><span class="editsection">[<a href="/w/index.php?title=Ruby&amp;action=edit&amp;section=9" title="Править секцию: Иноязычная литература">править</a>]</span> <span class="mw-headline" id=".D0.98.D0.BD.D0.BE.D1.8F.D0.B7.D1.8B.D1.87.D0.BD.D0.B0.D1.8F_.D0.BB.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0">Иноязычная литература</span></h3>
+<ul>
+<li><a href="http://mislav.uniqpath.com/poignant-guide/" class="external text" rel="nofollow"><i>Why’s (Poignant) Guide to Ruby</i></a><span title="на английском языке" style="font-size:85%; cursor:help; margin-left:0.2em; color:#888;">(англ.)</span> — эта книга достойна чтения, <i>даже если вам не нужно знание Ruby</i>. Просто шедевр. Распространяется на условиях CC by-sa 2.5. <a href="/wiki/Why%27s_Poignant_Guide_To_Ruby_RUS" title="Why's Poignant Guide To Ruby RUS">Частичный перевод здесь</a>.[<a href="http://translated.by/you/why-s-poignant-guide-to-ruby-part-1/into-ru/trans/" class="external text" rel="nofollow">А здесь перевод продолжается</a>]</li>
+<li><i>Programming Ruby</i> Дэйва Томаса<span title="на английском языке" style="font-size:85%; cursor:help; margin-left:0.2em; color:#888;">(англ.)</span>. Многие пытались, но не перевели на русский. Первая редакция книги содержится в пакете <a href="http://rubyinstaller.rubyforge.org/wiki/wiki.pl" class="external text" rel="nofollow">«Установка за один щелчок»</a> для Windows. Владельцы других <a href="http://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" class="extiw" title="w:Операционная система">ОС</a> смогут найти её в Сети (например, в виде <a href="http://www.rubycentral.com/book/" class="external text" rel="nofollow">набора вебстраниц</a>).</li>
+<li><a href="http://ruby.on-page.net" class="external text" rel="nofollow">Ruby.on-page.net</a><span title="на английском языке" style="font-size:85%; cursor:help; margin-left:0.2em; color:#888;">(англ.)</span> — самый простой справочник по Ruby</li>
+<li><a href="http://www.meshplex.org/wiki/Ruby/Ruby_on_Rails_programming_tutorials" class="external text" rel="nofollow">Full Ruby on Rails Tutorial</a> (GNU FDL 1.2)</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 113/1000000
+Post-expand include size: 2447/2048000 bytes
+Template argument size: 1491/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key ruwikibooks:pcache:idhash:2201-0!*!0!!ru!4 and timestamp 20110710102709 -->
+<div class="printfooter">
+Источник — «<a href="http://ru.wikibooks.org/wiki/Ruby">http://ru.wikibooks.org/wiki/Ruby</a>»</div>
+				<!-- /bodytext -->
+								<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Categories" title="Служебная:Categories">Категории</a>: <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%AF%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Категория:Языки программирования">Языки программирования</a></span> | <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:Ruby" title="Категория:Ruby">Ruby</a></span> | <span dir='ltr'><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Категория:Объектно-ориентированное программирование">Объектно-ориентированное программирование</a></span></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Личные инструменты</h5>
+	<ul>
+					<li  id="pt-login"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:UserLogin&amp;returnto=Ruby" title="Здесь можно зарегистрироваться в системе, но это необязательно. [o]" accesskey="o">Представиться / зарегистрироваться</a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Пространства имён</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Ruby"  title="Содержание статьи [c]" accesskey="c">Учебник</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:Ruby"  title="Обсуждение страницы [t]" accesskey="t">Обсуждение</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+		<h5><span>Варианты</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Просмотры</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Ruby" >Чтение</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Ruby&amp;action=edit"  title="Эту страницу можно изменять. Используйте, пожалуйста, предварительный просмотр перед сохранением [e]" accesskey="e">Правка</a></span></li>
+					<li id="ca-history" class="collapsible "><span><a href="/w/index.php?title=Ruby&amp;action=history"  title="Журнал изменений страницы [h]" accesskey="h">История</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Действия</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Поиск</label></h5>
+	<form action="/w/index.php" id="searchform">
+		<input type='hidden' name="title" value="Служебная:Search"/>
+				<div id="simpleSearch">
+						<input id="searchInput" name="search" type="text"  title="Искать это слово [f]" accesskey="f"  value="" />
+						<button id="searchButton" type='submit' name='button'  title="Найти страницы, содержащие указанный текст"><img src="http://bits.wikimedia.org/skins-1.17/vector/images/search-ltr.png?301-3" alt="Найти" /></button>
+					</div>
+			</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://upload.wikimedia.org/wikibooks/ru/b/bc/Wiki.png);" href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"  title="Заглавная страница"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>Навигация</h5>
+	<div class="body">
+				<ul>
+					<li id="n-mainpage"><a href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Перейти на заглавную страницу [z]" accesskey="z">Заглавная страница</a></li>
+					<li id="n-catalog"><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%92%D1%81%D1%91">Каталог</a></li>
+					<li id="n-randompage"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random" title="Посмотреть случайную страницу [x]" accesskey="x">Случайная статья</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- participation -->
+<div class="portal" id='p-participation'>
+	<h5>Участие</h5>
+	<div class="body">
+				<ul>
+					<li id="n-help"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D1%83%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA:%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0" title="Справочник по проекту «Викиучебник»">Справка</a></li>
+					<li id="n-forum"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D1%83%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA:%D0%9E%D0%B1%D1%89%D0%B8%D0%B9_%D1%84%D0%BE%D1%80%D1%83%D0%BC">Форум</a></li>
+					<li id="n-recentchanges"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:RecentChanges" title="Список последних изменений [r]" accesskey="r">Свежие правки</a></li>
+					<li id="n-newpages"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:NewPages">Новые страницы</a></li>
+					<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&amp;language=ru&amp;utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20101204SB002" title="Поддержите нас">Пожертвования</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /participation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id="p-tb">
+	<h5>Инструменты</h5>
+	<div class="body">
+		<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:WhatLinksHere/Ruby" title="Список всех страниц, которые ссылаются на эту страницу [j]" accesskey="j">Ссылки сюда</a></li>
+						<li id="t-recentchangeslinked"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:RecentChangesLinked/Ruby" title="Последние изменения в страницах, на которые ссылается эта страница [k]" accesskey="k">Связанные правки</a></li>
+																																										<li id="t-specialpages"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:SpecialPages" title="Список служебных страниц [q]" accesskey="q">Спецстраницы</a></li>
+											<li id="t-permalink"><a href="/w/index.php?title=Ruby&amp;oldid=65073" title="Постоянная ссылка на эту версию страницы">Постоянная ссылка</a></li>
+						</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- coll-print_export -->
+<div class="portal" id='p-coll-print_export'>
+	<h5>Печать/экспорт</h5>
+	<div class="body">
+				<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Book&amp;bookcmd=book_creator&amp;referer=Ruby" title="Создать книгу или коллекцию статей" rel="nofollow">Создать книгу</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Book&amp;bookcmd=render_article&amp;arttitle=Ruby&amp;oldid=65073&amp;writer=rl" title="Скачать PDF-версию этой вики-страницы" rel="nofollow">Скачать как PDF</a></li><li id="t-print"><a href="/w/index.php?title=Ruby&amp;printable=yes" title="Версия этой страницы для печати [p]" accesskey="p">Версия для печати</a></li></ul>			</div>
+</div>
+
+<!-- /coll-print_export -->
+
+<!-- LANGUAGES -->
+<div class="portal" id="p-lang">
+	<h5>На других языках</h5>
+	<div class="body">
+		<ul>
+					<li class="interwiki-de"><a href="http://de.wikibooks.org/wiki/Ruby-Programmierung" title="Ruby-Programmierung">Deutsch</a></li>
+					<li class="interwiki-en"><a href="http://en.wikibooks.org/wiki/Ruby_Programming" title="Ruby Programming">English</a></li>
+					<li class="interwiki-eo"><a href="http://eo.wikibooks.org/wiki/Lernolibro_pri_Rubeno" title="Lernolibro pri Rubeno">Esperanto</a></li>
+					<li class="interwiki-es"><a href="http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Ruby" title="Programación en Ruby">Español</a></li>
+					<li class="interwiki-fr"><a href="http://fr.wikibooks.org/wiki/Programmation_Ruby" title="Programmation Ruby">Français</a></li>
+					<li class="interwiki-ja"><a href="http://ja.wikibooks.org/wiki/Ruby" title="Ruby">日本語</a></li>
+					<li class="interwiki-nl"><a href="http://nl.wikibooks.org/wiki/Programmeren_in_Ruby" title="Programmeren in Ruby">Nederlands</a></li>
+					<li class="interwiki-pl"><a href="http://pl.wikibooks.org/wiki/Ruby" title="Ruby">Polski</a></li>
+					<li class="interwiki-zh"><a href="http://zh.wikibooks.org/wiki/Ruby_Programming" title="Ruby Programming">中文</a></li>
+				</ul>
+	</div>
+</div>
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+											<ul id="footer-info">
+																	<li id="footer-info-lastmod"> Последнее изменение этой страницы: 14:23, 25 мая 2011.</li>
+																							<li id="footer-info-copyright">Текст доступен по <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">лицензии Creative Commons Attribution/Share-Alike</a>, в отдельных случаях могут действовать дополнительные условия. Подробнее см. <a href="http://wikimediafoundation.org/wiki/Terms_of_Use/ru">Условия использования</a>.</li>
+															</ul>
+															<ul id="footer-places">
+																	<li id="footer-places-privacy"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D1%83%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA:%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0_%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="Викиучебник:Политика конфиденциальности">Политика конфиденциальности</a></li>
+																							<li id="footer-places-about"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D1%83%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA:%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" title="Викиучебник:Введение">Введение</a></li>
+																							<li id="footer-places-disclaimer"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D1%83%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA:%D0%9E%D1%82%D0%BA%D0%B0%D0%B7_%D0%BE%D1%82_%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="Викиучебник:Отказ от ответственности">Отказ от ответственности</a></li>
+															</ul>
+											<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.17/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.legacy.wikibits", "mediawiki.util", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest", "ext.vector.collapsibleNav", "ext.vector.collapsibleTabs", "ext.vector.editWarning", "ext.vector.simpleSearch"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script src="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BannerController&amp;cache=/cn.js&amp;301-3" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/ru.wikibooks.org/load.php?debug=false&amp;lang=ru&amp;modules=site&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":"3","watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"useeditwarning":1,"vector-collapsiblenav":1,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"variant":"ru","language":"ru","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false});;mediaWiki.loader.state({"user.options":"ready"});
+	
+	/* cache key: ruwikibooks:resourceloader:filter:minify-js:5:c5e8acdd73ef3d17e2e9872bd7b2a1d9 */
+}
+</script><script type="text/javascript" src="http://geoiplookup.wikimedia.org/"></script>		<!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- /fixalpha -->
+		<!-- Served by srv179 in 0.242 secs. -->			</body>
+</html>

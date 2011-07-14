@@ -1,7 +1,7 @@
 Rss::Application.routes.draw do
-  get "pages/home"
+   match '/home', :to => 'pages#home'
 
-  get "pages/details"
+  match '/details', :to => 'pages#details'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
