@@ -5,7 +5,7 @@ mark, rp, rt, ruby, summary, time {display:inline}
 .left {float:left}
 .right {float:right}
 .wrapper {width:100%;overflow:hidden;text-align:center}
-.wrapper2 {width:90%;overflow:hidden; background-color: #CDB7B5; padding:20px 0px 0px 0px;}
+.wrapper2 {width:90%;overflow:hidden; background-color: #CDB7B5; padding:20px 0px 0 0;}
 .center {text-align:center}
 body {width:100%;background:#001527;border:0;font:14px Arial, Helvetica, sans-serif;color:#363636;line-height:20px}
 .inner_copy, .inner_copy a {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
@@ -28,7 +28,7 @@ h1_2 {float:right;padding:21px 21px 0px 24px}
 h2 {font-size:30px;color:#182125;line-height:1.2em;padding:26px 0 14px 0;letter-spacing:-1px}
 h2 span {color:#006abb}
 h3 {font-size:20px;color:#fff;line-height:1.2em;padding:24px 0 40px 0}
-p {padding-bottom:20px}
+p {width:100%; padding-bottom:20px}
 /* header */
 header{}
 #logo {display:block;background:url(../images/logo.gif) no-repeat;width:160px;height:60px;text-indent:-9999px}
@@ -72,7 +72,7 @@ header .right{padding-right:59px;width:500px}
 .nivo-prevNav:hover {background:url(../images/marker_left_active.jpg) no-repeat}
 .nivo-nextNav:hover {background:url(../images/marker_right_active.jpg) no-repeat}
 /* content */
-#content {width:100%;overflow:hidden;padding:33px 0 48px 53px}
+#content {width:95%;overflow:hidden;padding:33px 0 48px 53px}
 .body6 figure {padding-left:58px}
 #page2 .body6 figure {padding-left:53px}
 #page2 #content, #page3 #content, #page4 #content, #page5 #content {padding-top:0}
@@ -81,7 +81,7 @@ header .right{padding-right:59px;width:500px}
 #page4 .body6 {padding-bottom:25px}
 #page4 .marg_bot1 {margin-bottom:14px}
 #page4 #content {padding-bottom:44px}
-.body6 h2 {padding:0 0 14px 0;margin-top:-1px;letter-spacing:-1px;float:left;width:820px}
+.body6 h2 {padding:0 0 14px 0;margin-top:-1px;letter-spacing:-1px;float:left;width:100%}
 .pad_left1 {padding-left:33px}
 .pad1 {padding:0 5px}
 .pad_bot1 {padding-bottom:10px}

@@ -4,6 +4,8 @@
     <title><%= @title %></title>
   </head>
   <body>
+<p>
+</p>
 <%  require 'simple-rss' %>
 <% require 'open-uri' %>
 <% @str_link = Settings.find_by_option_name("link") %>
@@ -28,15 +30,16 @@
 <% end-%>
 
 
-<% url = 'http://world-pulse.ru/archives/281' %>
+<% url = 'http://world-pulse.ru/archives/277' %>
 <% page = open(url) %>
-<% text = page.read %>
-<% infa = text.scan(%r{<p style="text-align: justify;">(.*)</p>}) %>
-<% infa.each do |t| -%>
-<%=  t %>
-<p> </p>
+<% @text = page.read %>
+<% @infa = @text.scan(%r{<p style="text-align: justify;">(.*)</p>}) %>
+<% @infa.each do |t| -%>
+<p style="width: 95%">
+<%= t[0].html_safe %>
+</p>
 <% end -%>
-
+<h1_2><a href=url>Ссылка на источник</a></h1_2>
 
   </body>
 </html>
