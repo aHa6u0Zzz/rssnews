@@ -6,6 +6,8 @@ class PagesController < ApplicationController
 
   def details
 	@title = "Details"
+	@urla = "http://world-pulse.ru/archives/277"
   end
 
+  
 end
