@@ -1,5 +1,5 @@
 Rss::Application.routes.draw do
-   match '/home', :to => 'pages#home'
+     match '/home',  :to => 'pages#home'
 
   match '/details', :to => 'pages#details'
 

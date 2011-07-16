@@ -8,7 +8,8 @@
 </p>
 <%  require 'simple-rss' %>
 <% require 'open-uri' %>
-<% @str_link = Settings.find_by_option_name("link") %>
+
+<% @str_link = Settings.find_by_option_name("link1") %>
 <% link = @str_link.option_status %>
 <% feed_items = SimpleRSS.parse(open(link)).items %>
 <% newss = {} %>
@@ -16,21 +17,66 @@
 <% @name = item.title %>
 <% if News.find_by_title(@name) == nil %>
 <% newss[@name] = News.new %>
+<% newss[@name][:title] = item.title %>
+<% newss[@name][:link] = item.link %>
+<% newss[@name][:description] = item.description %> 
+<% newss[@name].save %>
+<% else %>
+<% @tmp = '1' %>
+<% end %>
+<% end-%>
+
+<% @str_link = Settings.find_by_option_name("link2") %>
+<% link = @str_link.option_status %>
+<% feed_items = SimpleRSS.parse(open(link)).items %>
+<% newss = {} %>
+<% feed_items.each do |item| -%>
+<% @name = item.title %>
+<% if News.find_by_title(@name) == nil %>
 <% newss[@name] = News.new %>
 <% newss[@name][:title] = item.title %>
 <% newss[@name][:link] = item.link %>
 <% newss[@name][:description] = item.description %> 
 <% newss[@name].save %>
-
 <% else %>
 <% @tmp = '1' %>
-
-
+<% end %>
+<% end-%>
+<% @str_link = Settings.find_by_option_name("link3") %>
+<% link = @str_link.option_status %>
+<% feed_items = SimpleRSS.parse(open(link)).items %>
+<% newss = {} %>
+<% feed_items.each do |item| -%>
+<% @name = item.title %>
+<% if News.find_by_title(@name) == nil %>
+<% newss[@name] = News.new %>
+<% newss[@name][:title] = item.title %>
+<% newss[@name][:link] = item.link %>
+<% newss[@name][:description] = item.description %> 
+<% newss[@name].save %>
+<% else %>
+<% @tmp = '1' %>
+<% end %>
+<% end-%>
+<% @str_link = Settings.find_by_option_name("link4") %>
+<% link = @str_link.option_status %>
+<% feed_items = SimpleRSS.parse(open(link)).items %>
+<% newss = {} %>
+<% feed_items.each do |item| -%>
+<% @name = item.title %>
+<% if News.find_by_title(@name) == nil %>
+<% newss[@name] = News.new %>
+<% newss[@name][:title] = item.title %>
+<% newss[@name][:link] = item.link %>
+<% newss[@name][:description] = item.description %> 
+<% newss[@name].save %>
+<% else %>
+<% @tmp = '1' %>
 <% end %>
 <% end-%>
 
 
-<% url = 'http://world-pulse.ru/archives/277' %>
+
 <% page = open(@urla) %>
 <% @text = page.read %>
 <% @infa = @text.scan(%r{<p style="text-align: justify;">(.*)</p>}) %>

@@ -2,11 +2,13 @@ class PagesController < ApplicationController
   
   def home
 	@title = "Home"
+	@url = "http://world-pulse.ru/archives/288"
+	
   end
 
   def details
 	@title = "Details"
-	@urla = "http://world-pulse.ru/archives/277"
+	@urla = home[@url]
   end
 
   
