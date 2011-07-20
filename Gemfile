@@ -5,6 +5,7 @@ gem 'ffaker', '1.8.0'
 
 gem 'sqlite3', '1.3.3'
 gem 'simple-rss' , '1.2.3'
+gem 'htmlentities', '4.2.4'
 
 group :development do
   gem 'rspec-rails', '2.6.1'

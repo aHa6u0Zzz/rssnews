@@ -1,7 +1,9 @@
 Rss::Application.routes.draw do
-     match '/home',  :to => 'pages#home'
+        match '/show', :to => 'news#show'
 
-  match '/details', :to => 'pages#details'
+	resources :news
+        root   :to => 'pages#home'
+	match '/details', :to => 'pages#details'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

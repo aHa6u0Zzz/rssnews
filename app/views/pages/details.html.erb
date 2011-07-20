@@ -77,15 +77,8 @@
 
 
 
-<% page = open(@urla) %>
-<% @text = page.read %>
-<% @infa = @text.scan(%r{<p style="text-align: justify;">(.*)</p>}) %>
-<% @infa.each do |t| -%>
-<p style="width: 95%">
-<%= t[0].html_safe %>
-</p>
-<% end -%>
-<h1_2><a href=url>Ссылка на источник</a></h1_2>
-
+<div id="wrapper2"  style = "text-align: center">
+<h1_2><a href="/">Новости обновлены, перейти на главную</a></h1_2>
+</div>
   </body>
 </html>

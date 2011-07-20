@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= @title %></title>
-  </head>
-  <body>
+
+<div id="new" >
+<% require 'cgi' %>
+<%= stylesheet_link_tag 'style', :print => 'style' %>
 
 <% novost = News.find(:all) -%>
 <% novost.each do |item| %>
-	<div class="wrapper2">
-<p style="text-align: center; padding: 5px 0 0 0">	<%= item.title %> </p>
-<p style = " padding: 5px 0 0 15px"> <%= item.description  %> </p>
- <h1_2 ><a href="details" >  details </a></h1_2>   
+	<div id="wrapper2">
+<p style="text-align: center; padding: 5px 0 0 0; font-size: 20px;">	<%= item.title %> </p>
+<p style = " padding: 5px 0 0 15px"> <%=[CGI.unescapeHTML(item.description)].join.html_safe %> </p>
+ <h1_2 ><a href= "news/<%=item.id%>" style = "padding:30px "> details  </a></h1_2>   
 	</div> 
  <p> </p>
 <% end -%>
-<% @url = "http://world-pulse.ru/archives/277" %>
-  </body>
-</html>
-
-
-		
-		
+</div>
+	
 						
 	
 
